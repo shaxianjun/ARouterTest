@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cool.arouter">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".service.user.SerivceActivity" />
+        <activity android:name=".web.SrcUrlSendActivity"></activity>
+        <activity android:name=".web.DestUrlReceiveActivity">
+            <intent-filter>
+
+                <!-- 这里面的 host 、scheme 字段很重要。点击 url 会根据这两个字段会调起本地的 Activity -->
+                <data
+                    android:host="shaxj"
+                    android:scheme="arouter" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".jump.DestActivity" />
+        <activity android:name=".jump.SrcActivity" />
+    </application>
+
+</manifest>

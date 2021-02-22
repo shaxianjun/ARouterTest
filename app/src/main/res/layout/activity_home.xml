@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="[跨模块页面跳转]测试"
+        android:onClick="test1"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="[跨模块API调用]测试"
+        android:onClick="test2"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="[从外部URL映射到内部页面]测试"
+        android:onClick="test3"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="[拦截跳转过程]测试"
+        android:onClick="test4"
+        android:layout_height="wrap_content"></Button>
+
+
+</LinearLayout>
